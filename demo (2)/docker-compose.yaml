@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: dream_shops_db
+      MYSQL_USER: test
+      MYSQL_PASSWORD: my-secret-pw
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data.sql:/docker-entrypoint-initdb.db/data.sql
