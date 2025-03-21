@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,6 +18,7 @@ public class CartItem {
     @Id
     private Long id;
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "product_id")
     private Product product;
     private int quantity;
