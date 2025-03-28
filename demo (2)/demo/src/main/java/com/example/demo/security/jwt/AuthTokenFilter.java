@@ -1,7 +1,6 @@
 package com.example.demo.security.jwt;
 
 import com.example.demo.security.user.ShopUserDetailsService;
-import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.JwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
